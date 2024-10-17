@@ -1,0 +1,256 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.nav{
+  height: 20vh;
+  margin-inline: 1.5rem;
+  display: grid;
+  place-items: center;
+  
+}
+
+.overview {
+  text-align: center;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.overview h2 {
+  font-size: 3rem;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  
+}
+
+.temp{
+  
+  font-size: 8rem;
+  padding-left: 2.1rem;
+  padding-top: 0;
+  
+}
+.overview span{
+  font-size: 4rem;
+  vertical-align: super;
+}
+
+.icon_1 {
+  padding: 0;
+  width: 10rem;
+  height: 10rem;
+  margin: 0;
+
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0.645rem;
+  margin-top: 3rem;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+}
+.forecast {
+  border-radius: 1rem;
+  margin: 1.25rem 2.5rem;
+  background-color: rgba(128, 127, 127, 0.5);
+  margin-bottom: 4rem;
+  
+}
+
+.refresh_button{
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 50%;
+  top: 0.928rem;
+  bottom: 0.938rem;
+  padding: 0.625rem 1.25rem;
+  z-index: 1000;
+  right: 0.5rem;
+  margin: auto;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.rem;
+  padding: 0.2rem 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  
+}
+
+.days img {
+  width: 3.5rem;
+  height: auto;
+  margin-left: auto;
+}
+
+.line {
+  vertical-align: middle;
+  color: white;
+}
+
+
+
+.search{
+  position: relative;
+  width: 71%;
+  height: 2.7rem;
+  box-shadow: 0 0.25rem 1.5rem hsla(222, 68%, 12%, .1);
+  border-radius: 4rem;
+  padding: 0.625rem ;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.search__input{
+  border: none;
+  outline: none;
+  width: calc(100% - 38px);
+  height: 100%;
+  border-radius: 4rem;
+  padding-left: 0.4rem;
+  font-weight: 500;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bolder;
+}
+
+.search__button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0.5rem;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9)
+}
+
+.search__icon{
+  /* color: rgb(196, 196, 196); */
+  font-size: 2rem;
+  position: absolute;
+  transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+} 
+
+.search__close{
+  opacity: 0;
+} 
+footer{
+  text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 830px){
+
+  .search{
+    width: 31%;
+  }
+  .temp_1{
+    float: left;
+    margin: 2rem 5rem;
+    
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto ;
+    margin: 0rem 0rem;
+    
+  
+  }
+  .temp{
+    float: inline-end;
+  }
+
+  .grid-item{
+    background-color: transparent;
+    
+  }
+
+  .forecast {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    border-radius: 0;
+    width: 100%;
+    margin: 1rem 0rem;
+    background-color: transparent;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    white-space: nowrap;
+  }
+
+  .forecast::-webkit-scrollbar {
+    height: 8px; /* Customize scrollbar height */
+  }
+  
+  .forecast::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Scrollbar color */
+  }
+  .days{
+    padding: 0rem;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .days img {
+    width: 5.5rem;
+    height: auto;
+    margin-left: auto;
+  }
+  
+
+  
+
+
+ 
+} 
