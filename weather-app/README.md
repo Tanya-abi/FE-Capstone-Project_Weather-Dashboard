@@ -5,12 +5,12 @@ A weather dashboard that allows users to search for real-time weather data of a 
 Features:
 
 Weather Details:
-Temperature: Displays the current temperature in Celsius or Fahrenheit.
-Humidity: Shows the current humidity level as a percentage.
-Wind Speed: Displays the current wind speed in km/h or mph.
-Rain: Show the chance of rain in percenatage.
-Clouds: In percenatage the app, show user how cloudy it is in percenatage.
-Weather Condition Icon: A graphical representation of the current weather (e.g., sunny, cloudy, rainy).
+- Temperature: Displays the current temperature in Celsius or Fahrenheit.
+- Humidity: Shows the current humidity level as a percentage.
+- Wind Speed: Displays the current wind speed in km/h or mph.
+- Rain: Show the chance of rain in percenatage.
+- Clouds: In percenatage the app, show user how cloudy it is in percenatage.
+- Weather Condition Icon: A graphical representation of the current weather (e.g., sunny, cloudy, rainy).
 
 City Search Functionality:
 Search bar for entering the name of a city.
