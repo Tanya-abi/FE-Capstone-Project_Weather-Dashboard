@@ -1,4 +1,5 @@
 Weather Dashboard
+
 A weather dashboard that allows users to search for real-time weather data of a city, including temperature, humidity, wind speed, chance of rain, clouds and weather conditions. Built using React, Axios for API requests, and Vanilla CSS for responsive design.
 
 Features:
