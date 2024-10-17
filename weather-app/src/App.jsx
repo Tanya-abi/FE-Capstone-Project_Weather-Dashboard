@@ -137,12 +137,7 @@ const App = () => {
 
     <div style={{ backgroundColor: style.backgroundColor, color: style.textColor, minHeight: '100vh' }}>
       
-      {/* If there is an error, display it */}
-    {error && (
-      <div className="error-message">
-        <p>{error && <setError/>}</p>
-      </div>
-    )}
+
       
       <button onClick={refreshWeather} className='refresh_button'>
         <img width="20" height="20"  color='white' src="https://img.icons8.com/windows/32/refresh.png" alt="refresh"/>
