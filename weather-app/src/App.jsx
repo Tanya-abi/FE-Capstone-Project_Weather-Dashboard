@@ -56,6 +56,8 @@ const App = () => {
       // Fetch 5-day forecast
       const forecastResponse = await axios.get(forecastUrl);
       setForecastData(forecastResponse.data.list); // Store 5-day forecast data
+
+      
     } catch (error) {
       setError('Error fetching weather data'); // Set error message if request fails
       errorMessages(error);

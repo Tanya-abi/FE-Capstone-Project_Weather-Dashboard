@@ -1,11 +1,11 @@
 import React from "react";
 
-const getCurrentDayAndTime = () => {
+const getCurrentDayAndTime = (timezone) => {
   const currentDate = new Date(); // Get the current date
+  const localTime = new Date(currentDate.getTime() + timezone * 1000); 
   const options = { hour: '2-digit', minute: '2-digit', hour12: false };
-  return `${currentDate.toLocaleDateString('en-US', { weekday: 'short' })}, ${currentDate.toLocaleTimeString('en-US', options)}`;
-};
-
+  return `${localTime.toLocaleDateString('en-US', { weekday: 'short' })}, ${localTime.toLocaleTimeString('en-US', options)}`;
+}
 const OverviewWeather =({ weatherData }) => {
   if(!weatherData) {
     return <div>Loading current weather...</div> // In the case that the weatherData variable is empty, the code will return this message
@@ -17,7 +17,7 @@ const OverviewWeather =({ weatherData }) => {
       <div className="temp_1">
 
       <h2>{weatherData.name}</h2> {/* City name */}
-      <p>{getCurrentDayAndTime()}</p>
+      <p>{getCurrentDayAndTime(weatherData.timezone)}</p>
       <p>{Math.round(weatherData.main.temp_min)}°C |  {Math.round(weatherData.main.temp_max)}°C</p>
       <img
             src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
@@ -31,10 +31,6 @@ const OverviewWeather =({ weatherData }) => {
       
 
       </div>
-
-  
-      
-     
      
       <div className="grid-container">
 
@@ -50,7 +46,7 @@ const OverviewWeather =({ weatherData }) => {
 
         <p className="grid-item">{/*Rain */}
         <img width="55" height="55" src="https://img.icons8.com/ios/50/rain--v1.png" alt="rain--v1"/><br />rain<br />
-           {weatherData.rain ? '80%' : '10%'}
+         {weatherData.rain && weatherData.rain['1h'] ? `${Math.min(weatherData.pop * 100, 100)}%` : '0%'}
           </p>
 
         <p className="grid-item"> {/*Clouds */}

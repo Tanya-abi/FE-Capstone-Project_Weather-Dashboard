@@ -1,6 +1,8 @@
 import React, { useState } from 'react'; // Import React and useState for managing state in the component
 import axios from 'axios'; // Import Axios to handle API requests
 
+
+
 // This is the Weather component responsible for fetching and displaying weather data
 const Weather = ({ onSearch }) => {
   const [city, setCity] = useState('');
