@@ -115,13 +115,15 @@ const App = () => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             const { latitude, longitude } = position.coords; // Get user's coordinates
+            console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
             setGeoLocation({ lat: latitude, lon: longitude });
             fetchWeatherByCoordinates(latitude, longitude); // Fetch weather data using coordinates
           },
           (error) => {
             setError('Unable to retrieve location'); // Set error if geolocation fails
             console.error('Error getting location:', error);
-          }
+          },
+          { enableHighAccuracy: true }
         );
       } else {
         setError('Geolocation is not supported by this browser.'); // Handle unsupported geolocation

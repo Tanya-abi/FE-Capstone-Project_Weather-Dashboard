@@ -1,11 +1,16 @@
 import React from "react";
 
 const getCurrentDayAndTime = (timezone) => {
-  const currentDate = new Date(); // Get the current date
-  const localTime = new Date(currentDate.getTime() + timezone * 1000); 
+  const currentDate = new Date(); // Get the current UTC date
+  const utcOffset = currentDate.getTimezoneOffset() * 60000; // Offset in milliseconds (local timezone)
+  
+  // Adjust the current UTC time with the API's timezone offset
+  const localTime = new Date(currentDate.getTime() + utcOffset + timezone * 1000); 
+  
   const options = { hour: '2-digit', minute: '2-digit', hour12: false };
   return `${localTime.toLocaleDateString('en-US', { weekday: 'short' })}, ${localTime.toLocaleTimeString('en-US', options)}`;
-}
+};
+
 const OverviewWeather =({ weatherData }) => {
   if(!weatherData) {
     return <div>Loading current weather...</div> // In the case that the weatherData variable is empty, the code will return this message

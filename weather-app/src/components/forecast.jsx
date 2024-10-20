@@ -6,7 +6,7 @@ import React from 'react';
 
     forecastData.forEach((forecast) => {
       const date = new Date(forecast.dt_txt); // Get the full date
-      const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'long' }); // Get the day of the week
+      const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' }); // Get the day of the week
 
       // If the day hasn't been added yet, initialize it
       if (!days[dayOfWeek]) {
